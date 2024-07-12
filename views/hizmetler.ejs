@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetler</title>
+
+    <link rel="shortcut icon" type="image/png" href="\img\logo2.png"/>
+
+
+    <link rel="stylesheet" type="text/css" href="\css\hizmetler.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Menü-->
+    <%- include ("partials/_menu")%>
+
+
+        <div class="container-wrapper">
+
+            <!--Hizmetler sidebar-->>
+            <%- include ("partials/_hizmetlerSidebar")%>
+
+
+                <section id="hizmetler" class="sectionArea">
+                    <div class="hizmetlerGovde">
+                        <div class="container"> <!--flexbox-->
+
+                            <!--Hizmetler Section-->
+                            <%- include ("partials/_hizmetlerSection")%>
+
+                        </div>
+                </section>
+        </div>
+
+
+        <!--Footer-->
+        <%- include ("partials/_footer")%>

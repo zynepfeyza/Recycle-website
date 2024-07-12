@@ -1,0 +1,467 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    padding: 15px 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(221, 255, 187);
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+nav .menu {
+    float: right;
+}
+
+nav .menu ul {
+    list-style: none;
+}
+
+header .menu ul li {
+    position: relative;
+    float: left;
+}
+
+nav .menu ul li a {
+    font-size: 20px;
+    padding: 27px 17px;
+    color: rgb(144, 182, 119);
+    display: block;
+    text-decoration: none;
+    transition: all .5s ease;
+    letter-spacing: 1px;
+}
+
+nav .menu ul li a:hover {
+    color: rgb(102, 122, 78);
+}
+
+nav .menu ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgb(221, 255, 187);
+    display: none;
+}
+
+nav .menu ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(191, 221, 162);
+}
+
+nav .menu ul li:hover>ul {
+    display: initial;
+}
+
+
+#anasayfa {
+    position: relative;
+    z-index: 1;
+    background-color: rgb(200, 250, 166);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.manuel-navigasyon {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manuel-btn {
+    border: 2px solid rgb(200, 250, 166);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manuel-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manuel-btn:hover {
+    background: rgb(200, 250, 166);
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+.otomatik-navigasyon {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.otomatik-navigasyon div {
+    border: 2px solid rgb(200, 250, 166);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.otomatik-navigasyon div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.otomatik-navigasyon .auto-btn1 {
+    background: rgb(200, 250, 166);
+}
+
+#radio2:checked~.otomatik-navigasyon .auto-btn2 {
+    background: rgb(200, 250, 166);
+}
+
+#radio3:checked~.otomatik-navigasyon .auto-btn3 {
+    background: rgb(200, 250, 166);
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(221, 255, 187);
+    z-index: 1;
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    font-size: 20px;
+    text-shadow: 0 0 5px rgb(133, 161, 105);
+}
+
+.text-box h2 {
+    margin: 0;
+}
+
+.text-box hr {
+    width: 355px;
+    border: 2px solid rgb(221, 255, 187);
+}
+
+.text-box p {
+    margin: 10px 0;
+}
+
+
+.hizmetlerGovde .container {
+    justify-content: space-between;
+    background: rgb(200, 250, 166);
+    padding: 100px 40px;
+    display: flex;
+}
+
+.hizmetlerGovde .sutun3 {
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(200, 250, 166);
+}
+
+.hizmetlerText h3 {
+    margin-top: 155px;
+    letter-spacing: 3px;
+    font-size: 25px;
+    color: rgb(144, 182, 119);
+    text-align: center;
+}
+
+.hizmetlerText hr {
+    width: 335px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.hizmetlerText p {
+    font-family: 'Ephesis', cursive;
+    font-size: 30px;
+    color: rgb(113, 138, 97);
+    text-shadow: 0 0 2px rgb(113, 138, 97);
+    text-align: center;
+}
+
+.sectionHeader {
+    color: rgb(144, 182, 119);
+    text-align: center;
+    line-height: 200px;
+    font-size: 45px;
+    padding: 5px 40px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    background: rgb(200, 250, 166);
+}
+
+.hizmetlerUst {
+    text-align: center;
+    font-size: 20px;
+    background: rgb(200, 250, 166);
+    padding: 100px;
+}
+
+
+.item {
+    padding: 10px 20px;
+}
+
+.zoom {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+.zoom img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+
+.item .itemText {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgb(144, 182, 119);
+    border-radius: 5px;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.25);
+}
+
+.item h3 {
+    font-size: 25px;
+    color: rgb(144, 182, 119);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+    transition: all .5s ease;
+}
+
+.item p {
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+}
+
+.itemText hr {
+    width: 100px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.item:hover h3 {
+    color: rgb(102, 122, 78);
+}
+
+.item:hover .itemText {
+    color: rgb(144, 182, 119);
+    transition: all .5 ease;
+}
+
+.btnAyrinti {
+    color: rgb(102, 122, 78);
+    padding: 2px 10px;
+    text-decoration: none;
+}
+
+.item:hover .btnAyrinti {
+    color: rgb(102, 122, 78);
+    font-weight: bold;
+}
+
+.footerItem ul {
+    list-style-type: none;
+}
+
+.footerLinks ul {
+    list-style-type: none;
+}
+
+.sectionArea2 .container2 {
+    justify-content: space-between;
+    background: rgb(168, 223, 142);
+    padding: 40px 40px;
+    display: flex;
+    text-align: center;
+}
+
+.sectionArea2 .sutun2 {
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(168, 223, 142);
+}
+
+.footerItem {
+    padding: 20px;
+    background: rgb(168, 223, 142);
+}
+
+.footerItem img {
+    width: 80px;
+    background: rgb(168, 223, 142);
+}
+
+footer h3 {
+    color: rgb(32, 109, 66);
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer address{
+    font-size: 16px;
+    color: rgb(102, 122, 78);
+}
+
+
+footer h4 a{
+    font-size: 18px;
+    color: rgb(102, 122, 78);
+    text-decoration: none;
+}
+
+footer h4 a:hover{
+    color: rgb(146, 170, 116);
+}
+
+footer h2{
+    font-size: 25px;
+    color: rgb(32, 109, 66);
+}
+
+
+footer .fa {
+    font-size: 30px;
+    color: rgb(102, 122, 78);
+    line-height: 50px;
+    transition: .3s ease;
+}
+
+footer .fa:hover {
+    color: rgb(146, 170, 116);
+}
+
+footer p {
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+    line-height: 20px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: rgb(102, 122, 78);
+    letter-spacing: 2px;
+    transition: .3s ease;
+}
+
+.footerLinks a:hover {
+    color: rgb(146, 170, 116);
+}
+
+.sMedyaLink li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.tabloDonusum{
+    background-color: rgb(200, 250, 166);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.tabloDonusum h1{
+    color: rgb(144, 182, 119);
+    text-align: center;
+    line-height: 200px;
+    font-size: 45px;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+    background: rgb(200, 250, 166);
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #274629;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(168, 223, 142);
+}
+

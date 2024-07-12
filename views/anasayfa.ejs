@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Geri Dönüşüm">
+    <meta name="keywords" content="Kağıt, Plastik, Cam, Atık Yağ, Metal, Geri Dönüşüm">
+    <title>Anasayfa</title>
+
+    <link rel="shortcut icon" type="image/png" href="\img\logo2.png" />
+
+    <link rel="stylesheet" type="text/css" href="\css\main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!--menu-->
+    <%- include ("partials/_menu")%>
+
+
+        <!--Anasayfa-->
+
+        <section id="anasayfa">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+
+                    <div class="slide first">
+                        <img src="\img\suKirliligi.jpg" alt="suKirliligi">
+                        <div class="text-box">
+                            <h2>Daha İyi Bir Dünya İçin...</h2>
+                            <hr>
+                            <p>Atıkları çöpe göndermeyin, geri dönüşüme gönderin.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="\img\geriDonusum.jpg" alt="geriDonusum">
+                        <div class="text-box">
+                            <h2>Daha İyi Bir Dünya İçin...</h2>
+                            <hr>
+                            <p>Atıkları çöpe göndermeyin, geri dönüşüme gönderin.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="\img\cevre.jpg" alt="cevre">
+                        <div class="text-box">
+                            <h2>Daha İyi Bir Dünya İçin...</h2>
+                            <hr>
+                            <p>Atıkları çöpe göndermeyin, geri dönüşüme gönderin.</p>
+                        </div>
+                    </div>
+
+                    <div class="otomatik-navigasyon">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                </div>
+                <div class="manuel-navigasyon">
+                    <label for="radio1" class="manuel-btn"></label>
+                    <label for="radio2" class="manuel-btn"></label>
+                    <label for="radio3" class="manuel-btn"></label>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                var counter = 1;
+                setInterval(function () {
+                    document.getElementById("radio" + counter).checked = true;
+                    counter++;
+                    if (counter > 3) {
+                        counter = 1;
+                    }
+                }, 5000);
+            </script>
+        </section>
+
+
+        <section id="hizmetler" class="sectionArea">
+            <div class="hizmetlerUst">
+                <h2 class="sectionHeader"><b>HAKKIMIZDA</b></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident maxime consequuntur sunt,
+                    cupiditate
+                    corrupti quod. Ab exercitationem numquam eaque ipsam, inventore repellendus impedit, fugiat
+                    repudiandae
+                    quisquam architecto in, dicta amet.</p>
+            </div>
+
+
+            <div class="tabloDonusum">
+                <h1>GERİ DÖNÜŞÜM ORANLARI</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Malzeme</th>
+                            <th>Geri Dönüşüm Oranı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kağıt</td>
+                            <td>%70 - %80</td>
+                        </tr>
+                        <tr>
+                            <td>Plastik</td>
+                            <td>%20 - %30</td>
+                        </tr>
+                        <tr>
+                            <td>Cam</td>
+                            <td>%25 - %35</td>
+                        </tr>
+                        <tr>
+                            <td>Metal</td>
+                            <td>%30 - %40</td>
+                        </tr>
+                        <tr>
+                            <td>Atık Yağ</td>
+                            <td>%90 ve üzeri</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="hizmetlerGovde">
+                <div class="container"> <!--flexbox-->
+                    <div class="sutun3">
+                        <div class="hizmetlerMenu">
+                            <div class="hizmetlerText">
+                                <h3>HİZMETLERİMİZ</h3>
+                                <hr> <br>
+                                <p>Destek ol geri dönüşüme, gülümse geleceğe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Hizmetler Section-->
+                    <%- include ("partials/_hizmetlerSection")%>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <%- include ("partials/_footer")%>

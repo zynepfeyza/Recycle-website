@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek Olun</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Geri Dönüşüm">
+    <meta name="keywords" content="Kağıt, Plastik, Cam, Atık Yağ, Metal, Geri Dönüşüm">
+    <title>DesteK Olun</title>
+
+    <link rel="shortcut icon" type="image/png" href="\img\logo2.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/kayit.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Menü-->
+    <%- include ("partials/_menu")%>
+
+        <div class="container-wrapper">
+            <aside class="sidebar">
+                <hr><br>
+                <h2>DESTEK OLUN</h2>
+                <hr><br>
+                <ul>
+                    <li><a href="/destekOlun">İstek Formu</a></li>
+                    <br>
+                    <li><a href="/ssSorular">Sık Sorulan Sorular</a></li>
+                </ul>
+            </aside>
+
+            <section id="destekOlun" class="destekArea">
+                <div class="destekGovde">
+                    <div class="wrapper">
+                        <form action="users/destekOlun" method="POST">
+                            <h1>İstek Formu</h1>
+                            <h4>Size en kısa sürede dönüş yapacağız.</h4>
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <input type="text" placeholder="Ad ve Soyad" Name="adSoyad">
+                                    <i class='bx bxs-user'></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" placeholder="E-Mail" Name="email">
+                                    <i class='bx bxs-envelope'></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="number" placeholder="Telefon" Name="telefon">
+                                    <i class='bx bxs-phone'></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" placeholder="Adres" Name="adres">
+                                    <i class='bx bxs-location-plus'></i>
+                                </div>
+
+                                <label><input type="checkbox">Yukarıda verdiğim bilgiler gerçek ve doğrudur.</label>
+                                <button type="submit" class="btn">GÖNDER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector('form');
+                const submitButton = document.querySelector('.btn');
+
+                submitButton.addEventListener('click', function (event) {
+                    const inputFields = form.querySelectorAll('input[Name="required"]');
+                    const checkbox = form.querySelector('input[type="checkbox"]');
+                    let allFieldsFilled = true;
+
+                    inputFields.forEach(function (input) {
+                        if (input.value.trim() === '') {
+                            allFieldsFilled = false;
+                        }
+                    });
+
+                    if (!checkbox.checked || !allFieldsFilled) {
+                        alert('Lütfen tüm zorunlu alanları doldurun ve checkbox\'u işaretleyin.');
+                        event.preventDefault(); // Formun gönderilmesini engelle
+                    }
+                });
+            });
+        </script>
+
+
+        <!--Footer-->
+        <%- include ("partials/_footer")%>

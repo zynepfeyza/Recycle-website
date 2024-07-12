@@ -1,0 +1,461 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    padding: 15px 7%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(221, 255, 187);
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+nav .menu {
+    float: right;
+}
+
+nav .menu ul {
+    list-style: none;
+}
+
+header .menu ul li {
+    position: relative;
+    float: left;
+}
+
+nav .menu ul li a {
+    font-size: 20px;
+    padding: 27px 17px;
+    color: rgb(144, 182, 119);
+    display: block;
+    text-decoration: none;
+    transition: all .5s ease;
+    letter-spacing: 1px;
+}
+
+nav .menu ul li a:hover {
+    color: rgb(102, 122, 78);
+}
+
+nav .menu ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgb(221, 255, 187);
+    display: none;
+}
+
+nav .menu ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(191, 221, 162);
+}
+
+nav .menu ul li:hover>ul {
+    display: initial;
+}
+
+.footerItem {
+    padding: 20px;
+    background: rgb(168, 223, 142);
+}
+
+.footerItem img {
+    width: 80px;
+    background: rgb(168, 223, 142);
+}
+
+footer h3 {
+    color: rgb(32, 109, 66);
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer address{
+    font-size: 16px;
+    color: rgb(102, 122, 78);
+}
+
+footer h4 a{
+    font-size: 18px;
+    color: rgb(102, 122, 78);
+    text-decoration: none;
+}
+
+footer h4 a:hover{
+    color: rgb(146, 170, 116);
+}
+
+footer h2{
+    font-size: 25px;
+    color: rgb(32, 109, 66);
+}
+
+
+footer .fa {
+    font-size: 30px;
+    color: rgb(102, 122, 78);
+    line-height: 50px;
+    transition: .3s ease;
+}
+
+footer .fa:hover {
+    color: rgb(146, 170, 116);
+}
+
+footer p {
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+    line-height: 20px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: rgb(102, 122, 78);
+    letter-spacing: 2px;
+    transition: .3s ease;
+}
+
+.footerLinks a:hover {
+    color: rgb(146, 170, 116);
+}
+
+.sMedyaLink li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.container-wrapper{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(221, 255, 187);
+}
+
+.sidebar {
+    background-color: rgb(221, 255, 187);
+    color: rgb(144, 182, 119);
+    padding: 20px;
+    width: 250px;
+    position: relative;
+    height: 100%;
+}
+
+.sidebar h2 {
+    color: rgb(144, 182, 119);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: rgb(144, 182, 119);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sidebar a:hover {
+    color: rgb(102, 122, 78);
+}
+
+.sidebar hr {
+    width: 210px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.hizmetlerGovde .container {
+    justify-content: space-between;
+    background: rgb(200, 250, 166);
+    padding: 100px 40px;
+    display: flex;
+}
+
+.hizmetlerGovde .sutun3 {
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(200, 250, 166);
+}
+
+.sectionHeader {
+    color: rgb(144, 182, 119);
+    text-align: center;
+    line-height: 200px;
+    font-size: 45px;
+    padding: 5px 40px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    background: rgb(200, 250, 166);
+}
+
+.hizmetlerUst {
+    text-align: center;
+    font-size: 20px;
+    background: rgb(200, 250, 166);
+    padding: 100px;
+}
+
+
+.item {
+    padding: 10px 20px;
+}
+
+.zoom {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    border-radius: 5px;
+}
+
+.zoom img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+
+.item .itemText {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgb(144, 182, 119);
+    border-radius: 5px;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.25);
+}
+
+.item h3 {
+    font-size: 25px;
+    color: rgb(144, 182, 119);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+    transition: all .5s ease;
+}
+
+.item p {
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 5px rgb(212, 255, 171);
+}
+
+.itemText hr {
+    width: 100px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.item:hover h3 {
+    color: rgb(102, 122, 78);
+}
+
+.item:hover .itemText {
+    color: rgb(144, 182, 119);
+    transition: all .5 ease;
+}
+
+.btnAyrinti {
+    color: rgb(102, 122, 78);
+    padding: 2px 10px;
+    text-decoration: none;
+}
+
+.item:hover .btnAyrinti {
+    color: rgb(102, 122, 78);
+    font-weight: bold;
+}
+
+.footerItem ul {
+    list-style-type: none;
+}
+
+.footerLinks ul {
+    list-style-type: none;
+}
+
+.sectionArea2 .container2 {
+    justify-content: space-between;
+    background: rgb(168, 223, 142);
+    padding: 40px 40px;
+    display: flex;
+    text-align: center;
+}
+
+.sectionArea2 .sutun2 {
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(168, 223, 142);
+}
+
+.sectionArea{
+    background-color: rgb(200, 250, 166);
+}
+
+.toplamaGovde .container{
+    justify-content: space-between;
+    background-color: rgb(200, 250, 166);
+    padding: 100px 40px;
+    display: flex;
+}
+
+.toplamaGovde .bolum2{
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(200, 250, 166);
+}
+
+.toplamaText h1{
+    margin-top: 50px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.toplamaText p{
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.toplamaText hr{
+    width: 300px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.bolum2 img{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.toplamaAciklama{
+    justify-content: space-between;
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    margin-top: 20px;
+    padding: 10px 40px;
+    margin-bottom: 150px;
+}
+
+.ayirmaGovde .container{
+    justify-content: space-between;
+    background-color: rgb(200, 250, 166);
+    padding: 100px 40px;
+    display: flex;
+}
+
+.ayirmaGovde .bolum2{
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(200, 250, 166);
+}
+
+.ayirmaText h1{
+    margin-top: 50px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.ayirmaText p{
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.ayirmaText hr{
+    width: 300px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.bolum2 img{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.ayirmaAciklama{
+    justify-content: space-between;
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    margin-top: 20px;
+    padding: 10px 40px;
+    margin-bottom: 150px;
+}
+
+.balyalamaGovde .container{
+    justify-content: space-between;
+    background-color: rgb(200, 250, 166);
+    padding: 100px 40px;
+    display: flex;
+}
+
+.balyalamaGovde .bolum2{
+    flex-grow: 1;
+    width: 33.33%;
+    background: rgb(200, 250, 166);
+}
+
+.balyalamaText h1{
+    margin-top: 50px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: rgb(102, 122, 78);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.balyalamaText p{
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    text-shadow: 0 0 1px rgb(113, 138, 97);
+}
+
+.balyalamaText hr{
+    width: 300px;
+    border: 1px solid rgb(144, 182, 119);
+}
+
+.bolum2 img{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.balyalamaAciklama{
+    justify-content: space-between;
+    font-size: 20px;
+    color: rgb(113, 138, 97);
+    margin-top: 20px;
+    padding: 10px 40px;
+    margin-bottom: 150px;
+}
